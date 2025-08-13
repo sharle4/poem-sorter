@@ -352,11 +352,13 @@ class PoeticaApp:
 
         self._setup_style()
         self._build_widgets()
-        self._populate()
+        
 
         # état pour debouncing
         self._refresh_job: Optional[str] = None
         self._current_sort = ("comments", True)  # (col, desc)
+        
+        self._populate()
 
     # --- Data indices / caches --- #
     def _build_indices(self):
